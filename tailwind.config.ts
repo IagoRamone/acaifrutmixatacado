@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customGreen: "#BAD341",
+        customFundo:  "#5F3368",
+        customForm: "#4EA37D",
+        customButton:"#5EBF2A"
       },
     },
   },
