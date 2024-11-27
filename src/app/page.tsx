@@ -190,9 +190,15 @@ function SectionThree() {
         style={{ backgroundImage: "url('/img/lp/morango.png')" }}
       />
       
-      <button className="relative z-10 py-3 px-20 bg-customButton text-white font-semibold rounded-lg text-lg hover:bg-purple-800">
-        Quero ser um revendedor
-      </button>
+      <a
+  href="https://wa.me/5521964073564?text=Olá,Quero ser um revendedor!"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="relative z-10 py-3 px-20 bg-customButton text-white font-semibold rounded-lg text-lg hover:bg-purple-800">
+    Quero ser um revendedor
+  </button>
+</a>
 
     </div>
   );
