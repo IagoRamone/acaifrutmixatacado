@@ -221,7 +221,7 @@ function SectionTwo() {
                 name="cep"
                 className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg text-black"
                 placeholder="Digite seu CEP"
-                onBlur={handleCepBlur} // Ao sair do campo, chama a função para buscar o endereço
+                onBlur={handleCepBlur} 
               />
             </div>
             <div className="mb-4">
@@ -232,8 +232,8 @@ function SectionTwo() {
                 name="endereco"
                 className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg text-black"
                 placeholder="Digite seu endereço"
-                value={endereco} // Preenchido automaticamente pelo CEP
-                onChange={(e) => setEndereco(e.target.value)} // Permite que o usuário edite, se necessário
+                value={endereco} 
+                onChange={(e) => setEndereco(e.target.value)}
               />
             </div>
             <div className="mb-4">

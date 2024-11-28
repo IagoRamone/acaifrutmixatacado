@@ -3,21 +3,30 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebaseConfig"; 
-const Dashboard = () => {
-  const [users, setUsers] = useState<any[]>([]); 
+const Dashboard = () => { 
+  interface User {
+    id: string;
+    nome: string;
+    cpfCnpj: string;
+    cep: string;
+    endereco: string;
+    telefone: string;
+    email: string;
+  }
+  
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "clientes"));
-        const usersList: any[] = [];
+        const usersList: User[] = [];
         
         querySnapshot.forEach((doc) => {
-          console.log("Documento:", doc.data()); 
-          usersList.push({ ...doc.data(), id: doc.id });
+          usersList.push({ ...doc.data(), id: doc.id } as User);
         });
-  
+    
         setUsers(usersList);
         setLoading(false);
       } catch (error) {

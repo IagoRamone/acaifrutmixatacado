@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { db, app } from "../../firebaseConfig";
+import { app } from "../../firebaseConfig";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,10 +19,14 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/dashboard");
-    } catch (err: any) {
-      setError("Credenciais inválidas. Tente novamente.");
-      console.error("Erro de login:", err.message);
-    }
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError("Credenciais inválidas. Tente novamente.");
+        console.error("Erro de login:", err.message);
+      } else {
+        console.error("Erro desconhecido:", err);
+      }
+    }    
   };
 
   return (
