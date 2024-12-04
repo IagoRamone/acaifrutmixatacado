@@ -179,7 +179,7 @@ function SectionTwo() {
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center bg-customForm p-8 rounded-lg shadow-lg">
+        <div className="flex flex-col justify-center items-center bg-customButton p-8 rounded-lg shadow-lg">
           <img
             src="/img/lp/logo.png"
             alt="Imagem"
@@ -243,8 +243,8 @@ function SectionTwo() {
                 id="bairro"
                 name="bairro"
                 className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg text-black"
-                value={bairro} // Preenchido automaticamente pelo CEP
-                onChange={(e) => setBairro(e.target.value)} // Permite que o usuário edite, se necessário
+                value={bairro} 
+                onChange={(e) => setBairro(e.target.value)}
               />
             </div>
             <div className="mb-4">
@@ -254,8 +254,8 @@ function SectionTwo() {
                 id="cidade"
                 name="cidade"
                 className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg text-black"
-                value={cidade} // Preenchido automaticamente pelo CEP
-                onChange={(e) => setCidade(e.target.value)} // Permite que o usuário edite, se necessário
+                value={cidade} 
+                onChange={(e) => setCidade(e.target.value)}
               />
             </div>
             <div className="mb-4">
@@ -265,8 +265,8 @@ function SectionTwo() {
                 id="uf"
                 name="uf"
                 className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg text-black"
-                value={uf} // Preenchido automaticamente pelo CEP
-                onChange={(e) => setUf(e.target.value)} // Permite que o usuário edite, se necessário
+                value={uf} 
+                onChange={(e) => setUf(e.target.value)} 
               />
             </div>
             <div className="mb-4">
@@ -289,7 +289,7 @@ function SectionTwo() {
                 placeholder="Digite seu email"
               />
             </div>
-            <button className="w-full py-3 bg-customButton text-white font-semibold rounded-lg mt-6 hover:bg-purple-800">
+            <button className="w-full py-3 bg-purple-800 text-white font-semibold rounded-lg mt-6 ">
               Cadastre-se
             </button>
           </form>
